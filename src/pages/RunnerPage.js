@@ -16,8 +16,8 @@ const RunnerPage = () => {
         <>
         <h1>{runner.participant_name}</h1>
         <div className='race-list d-flex flex-col'>
-        {participantRaceInfo.map(o => 
-        <div className='race-item'>
+        {participantRaceInfo.map((o,i) => 
+        <div className='race-item' key={i}>
             <Link key={o.race_event_id} to={`/races/${race.race_event_id}`}>
             <p classsName='race-list-item'>{o.race_name}</p>
             </Link>
