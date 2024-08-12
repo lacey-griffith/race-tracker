@@ -57,7 +57,7 @@ const races = [
                     }
                 ],
                 "total_race_time": "03:00:00",
-                "placement": 2,
+                "placement": 4,
                 "laps_completed": 1
             },
             {
