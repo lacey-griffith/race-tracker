@@ -67,6 +67,17 @@ nav a:hover {
   border-bottom: 2px solid black;
 }
 
+.d-flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.placement::after {
+  content:' - ';
+}
+
 #add-comment-form {
   border-bottom: 2px solid black;
   padding: 16px;

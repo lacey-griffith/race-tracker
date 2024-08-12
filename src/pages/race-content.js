@@ -5,7 +5,8 @@ const races = [
         "race_desc": 'Austin, Texas',
         "participants": [
             {
-                "participant_id": "Racer001",
+                "participant_id": "1",
+                "participant_name": "Rosa Parks",
                 "tag_id": "TID001",
                 "checkpoints": [
                     {
@@ -28,11 +29,40 @@ const races = [
                     }
                 ],
                 "total_race_time": "02:45:00",
-                "placement": 1,
+                "placement": 2,
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer002",
+                "participant_id": "5",
+                "participant_name": "Nicholas Kristof",
+                "tag_id": "TID005",
+                "checkpoints": [
+                    {
+                        "checkpoint_location": "Start Line",
+                        "timestamp": "2024-09-15 08:00:00",
+                        "lap_count": 0,
+                        "reader_id": "StartLineReader"
+                    },
+                    {
+                        "checkpoint_location": "Hilltop",
+                        "timestamp": "2024-09-15 09:35:00",
+                        "lap_count": 1,
+                        "reader_id": "HilltopReader"
+                    },
+                    {
+                        "checkpoint_location": "Finish Line",
+                        "timestamp": "2024-09-15 11:00:00",
+                        "lap_count": 1,
+                        "reader_id": "FinishLineReader"
+                    }
+                ],
+                "total_race_time": "03:00:00",
+                "placement": 2,
+                "laps_completed": 1
+            },
+            {
+                "participant_id": "2",
+                "participant_name": "Patricia Schroeder",
                 "tag_id": "TID002",
                 "checkpoints": [
                     {
@@ -55,11 +85,12 @@ const races = [
                     }
                 ],
                 "total_race_time": "03:00:00",
-                "placement": 2,
+                "placement": 1,
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer003",
+                "participant_id": "3",
+                "participant_name": "Anita Hill",
                 "tag_id": "TID003",
                 "checkpoints": [
                     {
@@ -93,7 +124,8 @@ const races = [
         "race_desc": 'Denver, Colorado',
         "participants": [
             {
-                "participant_id": "Racer004",
+                "participant_id": "4",
+                "participant_name": "Kimberlé Crenshaw",
                 "tag_id": "TID004",
                 "checkpoints": [
                     {
@@ -120,7 +152,8 @@ const races = [
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer005",
+                "participant_id": "5",
+                "participant_name": "Nicholas Kristof",
                 "tag_id": "TID005",
                 "checkpoints": [
                     {
@@ -147,7 +180,8 @@ const races = [
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer006",
+                "participant_id": "6",
+                "participant_name": "Frederick Douglass",
                 "tag_id": "TID006",
                 "checkpoints": [
                     {
@@ -181,7 +215,8 @@ const races = [
         "race_desc": 'Port Aransas, Texas',
         "participants": [
             {
-                "participant_id": "Racer007",
+                "participant_id": "7",
+                "participant_name": "Leymah Gbowee",
                 "tag_id": "TID007",
                 "checkpoints": [
                     {
@@ -210,11 +245,39 @@ const races = [
                     }
                 ],
                 "total_race_time": "02:00:00",
-                "placement": 1,
+                "placement": 4,
+                "laps_completed": 1
+            },            {
+                "participant_id": "1",
+                "participant_name": "Rosa Parks",
+                "tag_id": "TID001",
+                "checkpoints": [
+                    {
+                        "checkpoint_location": "Start Line",
+                        "timestamp": "2024-08-11 07:00:00",
+                        "lap_count": 0,
+                        "reader_id": "StartLineReader"
+                    },
+                    {
+                        "checkpoint_location": "Midway Point",
+                        "timestamp": "2024-08-11 08:30:00",
+                        "lap_count": 1,
+                        "reader_id": "MidwayReader"
+                    },
+                    {
+                        "checkpoint_location": "Finish Line",
+                        "timestamp": "2024-08-11 09:45:00",
+                        "lap_count": 1,
+                        "reader_id": "FinishLineReader"
+                    }
+                ],
+                "total_race_time": "02:45:00",
+                "placement": 2,
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer008",
+                "participant_id": "8",
+                "participant_name": "Shirley Chisholm",
                 "tag_id": "TID008",
                 "checkpoints": [
                     {
@@ -243,11 +306,40 @@ const races = [
                     }
                 ],
                 "total_race_time": "02:30:00",
-                "placement": 2,
+                "placement": 3,
                 "laps_completed": 1
             },
             {
-                "participant_id": "Racer009",
+                "participant_id": "5",
+                "participant_name": "Nicholas Kristof",
+                "tag_id": "TID005",
+                "checkpoints": [
+                    {
+                        "checkpoint_location": "Start Line",
+                        "timestamp": "2024-09-15 08:00:00",
+                        "lap_count": 0,
+                        "reader_id": "StartLineReader"
+                    },
+                    {
+                        "checkpoint_location": "Hilltop",
+                        "timestamp": "2024-09-15 09:35:00",
+                        "lap_count": 1,
+                        "reader_id": "HilltopReader"
+                    },
+                    {
+                        "checkpoint_location": "Finish Line",
+                        "timestamp": "2024-09-15 11:00:00",
+                        "lap_count": 1,
+                        "reader_id": "FinishLineReader"
+                    }
+                ],
+                "total_race_time": "03:00:00",
+                "placement": 5,
+                "laps_completed": 1
+            },
+            {
+                "participant_id": "9",
+                "participant_name": "Jimmy Carter",
                 "tag_id": "TID009",
                 "checkpoints": [
                     {
@@ -276,7 +368,7 @@ const races = [
                     }
                 ],
                 "total_race_time": "03:00:00",
-                "placement": 3,
+                "placement": 1,
                 "laps_completed": 1
             }
         ]
