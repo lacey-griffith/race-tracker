@@ -26,6 +26,10 @@ nav {
   background: white;
 }
 
+nav img {
+  max-width: 300px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
