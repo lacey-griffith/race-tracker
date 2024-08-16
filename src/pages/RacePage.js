@@ -22,5 +22,3 @@ const RacePage = () => {
 }
 
 export default RacePage;
-
-//<Link key={race.race_event_id} className='race-list-item' to={`/races/${race.race_event_id}`}>

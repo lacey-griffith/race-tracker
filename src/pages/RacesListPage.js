@@ -5,7 +5,7 @@ import RacesList from '../components/RacesList';
 const RacesListPage = () => {
     return (
         <>
-        <h1>All Races</h1>
+        <h1 className='page-header'>All Races</h1>
         <RacesList races={races}/>
         </>
     )
