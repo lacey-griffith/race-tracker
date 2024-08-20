@@ -5,7 +5,8 @@ const races = [
         "race_desc": 'Austin, Texas',
         "date": '01/11/2024',
         "registration_open": false,
-        "tags":[{"text": '26.2 miles',"handle":"marathon"}],
+        "length": 6.2,
+        "type": '10k',
         "participants": [
             {
                 "participant_id": "1",
@@ -127,7 +128,8 @@ const races = [
         "date": '08/06/2024',
         "race_desc": 'Denver, Colorado',
         "registration_open": false,
-        "tags":[{"text": '3.14 miles',"handle":"5k"}],
+        "length": 13.1,
+        "type": 'Half Marathon',
         "participants": [
             {
                 "participant_id": "4",
@@ -221,7 +223,8 @@ const races = [
         "race_desc": 'Port Aransas, Texas',
         "date": '05/09/2024',
         "registration_open": false,
-        "tags":[{"text": '1 mile',"handle":"1-m"}],
+        "length": 1,
+        "type": '1 Mile',
         "participants": [
             {
                 "participant_id": "7",
@@ -381,13 +384,15 @@ const races = [
                 "laps_completed": 1
             }
         ]
-    },    {
+    },
+    {
         "race_event_id": "CoastalHalf2025",
         "race_name": "Coastal Half Marathon 2025",
         "race_desc": 'Port Aransas, Texas',
         "date": '12/30/2025',
         "registration_open": true,
-        "tags":[{"text": '13.1 miles',"handle":"13-1-m"}],
+        "length": 13.1,
+        "type": 'Half Marathon',
         "participants": [
             {
                 "participant_id": "7",

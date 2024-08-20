@@ -1,22 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
-}
-
-button {
-  padding: 16px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  background-color: black;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 h3, h4 {
   margin-bottom: 0;
 }
 
+#page-body {
+  width: 100%;
+  margin: auto;
+  padding-top: 100px;
+  padding: 113px 25px 25px 25px;
+}
+
+#page-body section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* * * * * * * * * * /
+/* Navigation */
 nav {
   border-bottom: 4px solid black;
   text-align: center;
@@ -61,77 +71,130 @@ nav a:hover {
   color: white;
 }
 
-#page-body {
-  max-width: 1100px;
-  margin: auto;
-  padding-top: 100px;
-  padding: 100px 25px 25px 25px;
-}
-
-/* * * * * * * * * * /
-/* Races List Table */
-table.races-list-table {
-  width: 100%;
-  text-align: left;
-}
-
-.race-list-wrapper img {
-  max-width: 100px;
-  vertical-align: bottom;
-}
-
-table.races-list-table tr {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  position: relative;
-}
-
-table.races-list-table tr span {
-  position: absolute;
-  top:50%;
-  
-}
-
-table.races-list-table tr td a {
-  text-decoration: none;
-  color: #000;
-}
-
-table.races-list-table tr td a:hover {
-  text-decoration: underline;
-}
-
-/*End Races Table */
-
-.d-flex {
-  display: flex;
-}
-.flex-col {
-  flex-direction: column;
-}
-
-.placement::after {
-  content:' - ';
-}
-
-input, textarea {
-  display: block;
-  width: 300px;
-  padding: 8px;
-  border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 18px;
-  border: 2px solid black;
-  margin-bottom: 16px;
-}
-
-.error {
-  padding: 8px;
-  border-radius: 4px;
-  background-color: pink;
-}
-
 .nav-right {
   position: absolute;
   top: 8px;
   right: 8px;
+}
+/* End Nav */
+
+/* * * * * * * * * * /
+/* Races Filter */
+.races-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.races-list-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+
+.races-list-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.race-item {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0px 10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 23%;
+  width: 100%;
+}
+
+.race-item .race-img img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.race-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.race-details div, .race-details a {
+  margin-bottom: 5px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
+.filters input[type="text"] {
+  width: 100%;
+}
+
+.filters input, .filters select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters label {
+  display: flex;
+  align-items: center;
+}
+
+.filter-options > div {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-container {
+  position: relative;
+}
+
+.filter-title {
+  cursor: pointer;
+  background: #000;
+  padding: 4px 15px;
+  border-radius: 38px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.filter-options {
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-options input {
+  margin-right: 5px;
+}
+
+.filters-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+/* End Races Filter */
+
+@media only screen and (min-width: 550px){
+
 }
