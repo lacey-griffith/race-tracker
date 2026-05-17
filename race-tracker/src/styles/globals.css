@@ -1,0 +1,141 @@
+/* ─── THEMES ────────────────────────────────────────────────────────────────── */
+
+[data-theme="dark"] {
+  --bg:        #0a0a0f;
+  --surface:   #111118;
+  --surface2:  #1a1a24;
+  --border:    #2a2a3a;
+  --accent:    #ff3d00;
+  --accent2:   #ff9500;
+  --green:     #00e676;
+  --text:      #f0f0f5;
+  --text2:     #b0b0c8;
+  --muted:     #7070a0;
+  --card-bg:   #14141e;
+  --nav-bg:    rgba(10,10,15,0.95);
+  --shadow:    0 20px 40px rgba(0,0,0,0.5);
+}
+
+[data-theme="light"] {
+  --bg:        #f4f4f8;
+  --surface:   #ffffff;
+  --surface2:  #f0f0f5;
+  --border:    #dddde8;
+  --accent:    #e63000;
+  --accent2:   #e08500;
+  --green:     #00a650;
+  --text:      #111118;
+  --text2:     #44445a;
+  --muted:     #888899;
+  --card-bg:   #ffffff;
+  --nav-bg:    rgba(255,255,255,0.95);
+  --shadow:    0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* ─── RESET ─────────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────────────────────── */
+
+.font-display { font-family: 'Barlow Condensed', sans-serif; }
+.font-mono    { font-family: 'Space Mono', monospace; }
+
+/* ─── BUTTONS ─────────────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.875rem;
+  letter-spacing: 0.5px; cursor: pointer; border-radius: 2px;
+  transition: all 0.2s; border: none; text-decoration: none;
+  padding: 0.55rem 1.25rem; white-space: nowrap;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--accent); color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1); transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255,61,0,0.35);
+}
+
+.btn-ghost {
+  background: none; color: var(--text); border: 1px solid var(--border);
+}
+.btn-ghost:hover:not(:disabled) { border-color: var(--text2); }
+
+.btn-lg {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 1rem; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+}
+.btn-lg.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 10px 30px rgba(255,61,0,0.4);
+}
+
+/* ─── LAYOUT HELPERS ──────────────────────────────────────────────────────────── */
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.section   { padding: 5rem 0; }
+
+/* ─── FORMS ───────────────────────────────────────────────────────────────────── */
+
+.form-group { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.form-label {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.8px;
+  text-transform: uppercase; color: var(--muted);
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  background: var(--bg); border: 1px solid var(--border);
+  color: var(--text); padding: 0.7rem 1rem;
+  font-family: 'Barlow', sans-serif; font-size: 0.95rem;
+  outline: none; border-radius: 2px; transition: border-color 0.2s;
+  appearance: none;
+}
+.form-input::placeholder { color: var(--muted); }
+.form-input:focus,
+.form-select:focus { border-color: var(--accent); }
+
+/* ─── CARDS ───────────────────────────────────────────────────────────────────── */
+
+.card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 4px; overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  border-color: rgba(255,61,0,0.35);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* ─── BADGE ───────────────────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-block; padding: 0.2rem 0.55rem; border-radius: 100px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+}
+.badge-green  { background: rgba(0,230,118,0.15); color: var(--green); }
+.badge-orange { background: rgba(255,149,0,0.15);  color: var(--accent2); }
+.badge-red    { background: rgba(255,61,0,0.15);   color: var(--accent); }
+
+/* ─── SCROLLBAR ───────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

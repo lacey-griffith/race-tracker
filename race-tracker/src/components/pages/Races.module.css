@@ -1,0 +1,51 @@
+.page { padding: 3rem 0 5rem; }
+
+.pageHeader { margin-bottom: 2rem; }
+.pageTitle {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 2.4rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text);
+}
+.pageSub { color: var(--muted); font-size: 0.95rem; margin-top: 0.35rem; }
+
+.searchWrap { margin-bottom: 1.25rem; }
+.searchBar {
+  display: flex; align-items: center;
+  border: 1px solid var(--border); background: var(--surface);
+  border-radius: 2px; overflow: hidden;
+}
+.searchIcon { margin-left: 1rem; color: var(--muted); flex-shrink: 0; }
+.searchInput {
+  flex: 1; background: none; border: none; color: var(--text);
+  padding: 0.9rem 0.75rem; font-family: 'Barlow', sans-serif; font-size: 0.95rem;
+  outline: none;
+}
+.searchInput::placeholder { color: var(--muted); }
+.searchSelect {
+  background: var(--surface2); border: none; border-left: 1px solid var(--border);
+  color: var(--muted); padding: 0.9rem 1rem; font-family: 'Barlow', sans-serif;
+  font-size: 0.875rem; outline: none; cursor: pointer;
+}
+.searchBtn { border-radius: 0; padding: 0.9rem 1.75rem; font-size: 0.9rem; }
+
+.pills { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.pill {
+  padding: 0.35rem 1rem; border: 1px solid var(--border); border-radius: 100px;
+  font-size: 0.8rem; color: var(--muted); cursor: pointer; background: none;
+  font-family: 'Barlow', sans-serif; transition: all 0.2s;
+}
+.pill:hover { border-color: var(--text2); color: var(--text); }
+.pillActive { border-color: var(--accent) !important; color: var(--accent) !important; background: rgba(255,61,0,0.08) !important; }
+
+.resultsCount { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.25rem; }
+.count { color: var(--text); font-weight: 700; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+.empty { text-align: center; padding: 5rem 0; }
+.emptyIcon { font-size: 3rem; margin-bottom: 1rem; }
+.emptyText { font-size: 1.1rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+@media (max-width: 768px) {
+  .searchBar { flex-wrap: wrap; }
+  .searchSelect { display: none; }
+}

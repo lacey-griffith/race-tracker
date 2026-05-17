@@ -1,0 +1,108 @@
+/* Hero */
+.hero {
+  position: relative; overflow: hidden;
+  min-height: 88vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 4rem 1.5rem;
+}
+.heroGrid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,61,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,61,0,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+.heroGlow {
+  position: absolute; width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(255,61,0,0.12) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.heroEyebrow {
+  font-family: 'Space Mono', monospace; font-size: 0.75rem;
+  letter-spacing: 3px; color: var(--accent); text-transform: uppercase;
+  margin-bottom: 1.5rem; position: relative; z-index: 1;
+}
+.heroHeadline {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(4rem, 10vw, 8rem); line-height: 0.9;
+  letter-spacing: -2px; text-transform: uppercase;
+  position: relative; z-index: 1; margin-bottom: 1.5rem; color: var(--text);
+}
+.heroHeadline em { color: var(--accent); font-style: normal; }
+.heroSub {
+  font-size: 1.1rem; color: var(--muted); max-width: 520px; line-height: 1.7;
+  position: relative; z-index: 1; margin-bottom: 2.5rem;
+}
+.heroCtas { display: flex; gap: 1rem; position: relative; z-index: 1; flex-wrap: wrap; justify-content: center; }
+
+/* Stats */
+.statsBar {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.stat {
+  padding: 2rem 1rem; text-align: center;
+  border-right: 1px solid var(--border);
+}
+.stat:last-child { border-right: none; }
+.statNum {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 2.6rem; color: var(--text); letter-spacing: -1px;
+}
+.statLabel {
+  font-size: 0.75rem; color: var(--muted); letter-spacing: 1.5px;
+  text-transform: uppercase; margin-top: 0.2rem;
+}
+
+/* Features */
+.features {
+  padding: 5rem 0;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.featuresHeader { text-align: center; margin-bottom: 3.5rem; }
+.featuresTitle {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text);
+}
+.featuresSub { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+.featuresGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.featureCard {
+  padding: 1.75rem; border: 1px solid var(--border);
+  background: var(--card-bg); border-radius: 4px; transition: border-color 0.25s;
+}
+.featureCard:hover { border-color: rgba(255,61,0,0.3); }
+.featureIcon {
+  width: 48px; height: 48px;
+  background: rgba(255,61,0,0.08); border: 1px solid rgba(255,61,0,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 1.1rem;
+}
+.featureName {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--text); margin-bottom: 0.65rem;
+}
+.featureDesc { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
+
+/* CTA Banner */
+.ctaBanner {
+  padding: 5rem 0; text-align: center;
+}
+.ctaTitle {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 3rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text);
+}
+.ctaSub { color: var(--muted); font-size: 1rem; margin: 0.75rem 0 2rem; }
+.ctaBtns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .statsBar { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-bottom: 1px solid var(--border); }
+  .featuresGrid { grid-template-columns: 1fr; }
+}

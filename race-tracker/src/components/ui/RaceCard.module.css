@@ -1,0 +1,52 @@
+.card { cursor: pointer; position: relative; }
+
+.featuredBadge {
+  position: absolute; top: 0.85rem; right: 0.85rem; z-index: 2;
+  background: var(--accent2); color: #000;
+  font-family: 'Space Mono', monospace; font-size: 0.62rem; font-weight: 700;
+  padding: 0.2rem 0.5rem; letter-spacing: 1px; text-transform: uppercase;
+}
+
+.banner {
+  height: 150px; position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.emoji { font-size: 3rem; line-height: 1; }
+.distanceBadge {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0.6rem 1rem;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 0.8rem; letter-spacing: 2px; color: var(--accent);
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.45);
+  border-top: 2px solid var(--accent);
+}
+
+.body { padding: 1.2rem; }
+
+.name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 1.2rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text);
+}
+
+.meta { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1rem; }
+.metaItem {
+  display: flex; align-items: center; gap: 0.45rem;
+  font-size: 0.83rem; color: var(--muted);
+}
+.metaItem svg { flex-shrink: 0; }
+
+.footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 0.85rem; border-top: 1px solid var(--border);
+}
+.price {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--text);
+}
+.priceSub { font-family: 'Barlow', sans-serif; font-size: 0.7rem; color: var(--muted); font-weight: 400; }
+
+.spots { font-size: 0.75rem; color: var(--muted); text-align: right; }
+.spotsNum { color: var(--green); font-weight: 700; }
+.bar { height: 3px; background: var(--border); border-radius: 2px; margin-top: 0.3rem; width: 80px; }
+.fill { height: 100%; background: var(--green); border-radius: 2px; }

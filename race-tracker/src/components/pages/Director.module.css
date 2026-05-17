@@ -1,0 +1,58 @@
+.page { padding: 3rem 0 5rem; }
+.header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text);
+}
+.sub { color: var(--muted); font-size: 0.95rem; margin-top: 0.3rem; }
+
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.statCard {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 4px; padding: 1.5rem;
+}
+.statVal {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 2.2rem; color: var(--text); letter-spacing: -1px;
+}
+.statGreen { color: var(--green) !important; }
+.statLabel { font-size: 0.72rem; color: var(--muted); letter-spacing: 1.2px; text-transform: uppercase; margin-top: 0.2rem; }
+
+.tableCard {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+}
+.tableHeader {
+  padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.tableTitle {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text);
+}
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table th {
+  text-align: left; padding: 0.75rem 1.25rem;
+  font-family: 'Space Mono', monospace; font-size: 0.68rem;
+  color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.table td {
+  padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.9rem; color: var(--text);
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.02); }
+
+.bibCell { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--accent); }
+.nameCell { font-weight: 600; }
+.mutedCell { color: var(--muted); }
+.amountCell { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; }
+
+@media (max-width: 768px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .header { flex-direction: column; gap: 1rem; }
+}

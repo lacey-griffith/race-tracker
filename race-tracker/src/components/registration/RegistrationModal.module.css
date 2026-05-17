@@ -1,0 +1,129 @@
+.overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.8); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+}
+.modal {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 4px; width: 100%; max-width: 560px;
+  max-height: 90vh; overflow-y: auto;
+}
+.header {
+  padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; background: var(--surface); z-index: 1;
+}
+.title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text);
+}
+.close {
+  background: none; border: none; color: var(--muted);
+  cursor: pointer; padding: 0.25rem; transition: color 0.2s; display: flex;
+}
+.close:hover { color: var(--text); }
+.body { padding: 1.5rem; }
+
+/* steps */
+.steps {
+  display: flex; margin-bottom: 1.75rem; gap: 0;
+}
+.step {
+  flex: 1; padding: 0.6rem 0.25rem; text-align: center;
+  font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.5px;
+  color: var(--muted); border-bottom: 2px solid var(--border);
+  text-transform: uppercase; transition: all 0.3s;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.stepNum { display: block; font-size: 0.7rem; margin-bottom: 0.15rem; }
+.stepActive { color: var(--accent); border-bottom-color: var(--accent); }
+.stepDone   { color: var(--green);  border-bottom-color: var(--green); }
+
+/* race info banner */
+.raceInfo {
+  display: flex; gap: 1rem; align-items: center;
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 2px; padding: 1rem; margin-bottom: 1.25rem;
+}
+.raceEmoji { font-size: 2rem; }
+.raceName { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+.raceSub  { font-size: 0.83rem; color: var(--muted); margin-top: 0.15rem; }
+
+.fieldLabel {
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem;
+}
+
+/* event grid */
+.eventGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+.eventOption {
+  border: 1px solid var(--border); padding: 1rem; cursor: pointer;
+  border-radius: 2px; transition: all 0.2s; text-align: center;
+}
+.eventOption:hover { border-color: var(--accent); background: rgba(255,61,0,0.06); }
+.eventSelected { border-color: var(--accent) !important; background: rgba(255,61,0,0.1) !important; }
+.eventDist {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 1.35rem; color: var(--text);
+}
+.eventPrice { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* form grid */
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+/* waiver */
+.waiverText {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 2px; padding: 1rem;
+  font-size: 0.8rem; color: var(--muted); line-height: 1.65;
+  max-height: 130px; overflow-y: auto; margin-bottom: 1rem;
+}
+.checkRow {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.85rem; color: var(--text2); margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.checkRow input { accent-color: var(--accent); cursor: pointer; }
+
+/* payment summary */
+.summary {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 2px; padding: 1.1rem; margin-bottom: 1.25rem;
+}
+.summaryTitle {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem;
+}
+.summaryRow {
+  display: flex; justify-content: space-between;
+  font-size: 0.9rem; padding: 0.35rem 0; color: var(--text);
+}
+.summaryMuted { color: var(--muted); }
+.summaryTotal {
+  border-top: 1px solid var(--border); margin-top: 0.5rem;
+  padding-top: 0.65rem;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem;
+}
+
+/* actions */
+.actions { display: flex; gap: 0.75rem; align-items: center; justify-content: flex-end; }
+
+/* success */
+.success { text-align: center; padding: 1rem 0; }
+.successIcon { font-size: 3.5rem; margin-bottom: 0.75rem; }
+.successTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 2.2rem; text-transform: uppercase;
+  color: var(--green); margin-bottom: 0.5rem;
+}
+.successSub { color: var(--muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem; }
+.bibCard {
+  background: var(--card-bg); border: 2px solid var(--green);
+  border-radius: 4px; padding: 1.5rem; display: inline-block;
+  min-width: 180px; margin-bottom: 1.5rem;
+}
+.bibLabel { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+.bibNum { font-family: 'Space Mono', monospace; font-size: 3rem; font-weight: 700; color: var(--green); line-height: 1.1; }
+.bibSub { font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
+.successActions { display: flex; gap: 1rem; justify-content: center; }

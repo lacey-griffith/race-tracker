@@ -1,0 +1,44 @@
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 2rem;
+}
+.inner { }
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.brand p {
+  font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-top: 0.75rem;
+}
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 1.4rem; letter-spacing: 2px; color: var(--text);
+}
+.logo span { color: var(--accent); }
+
+.colTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 0.85rem; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text); margin-bottom: 1rem;
+}
+.linkList { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.linkList a {
+  color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;
+}
+.linkList a:hover { color: var(--text); }
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.8rem; color: var(--muted);
+}
+.mono { font-family: 'Space Mono', monospace; font-size: 0.7rem; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .brand { grid-column: 1 / -1; }
+}
